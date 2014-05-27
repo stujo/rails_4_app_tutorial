@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use postgresql as the database for Active Record
@@ -21,10 +20,10 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+gem 'spring', group: :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -38,3 +37,22 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development do
+  gem 'quiet_assets'
+  gem 'better_errors'
+end
+
+group :development do
+  gem 'meta_request' # https://chrome.google.com/webstore/detail/railspanel/gjpfobpafnhjhbajcjgccbbdofdckggg
+end
+
+group :development do
+  gem 'binding_of_caller' # Going up the stack  binding.of_caller(2).eval('var = :hello')
+  gem 'awesome_print' # In the rails console: ap Account.limit(2).all
+  gem 'pry-rails' # Uses pry instead of irb for the console
+  gem 'pry-byebug'
+end
+
+group :development, :test do
+  gem 'rspec-rails'
+end
