@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'pages/helloworld'
+  # get 'pages/helloworld'
 
   get 'helloworld' => 'pages#helloworld', as: :helloworld
   
