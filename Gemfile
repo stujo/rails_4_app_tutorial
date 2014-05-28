@@ -60,3 +60,4 @@ end
 
 #Level 03-Bootstrap
 gem 'bootstrap-sass'
+gem 'bootstrap-generators', '~> 3.1.1'
