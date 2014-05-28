@@ -13,7 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-$navbar-default-bg: #d8f8d8;
-
-@import "bootstrap";
