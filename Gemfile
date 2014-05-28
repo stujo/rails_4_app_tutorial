@@ -61,3 +61,9 @@ end
 #Level 03-Bootstrap
 gem 'bootstrap-sass'
 gem 'bootstrap-generators', '~> 3.1.1'
+
+#Level 05-Validations
+group :development, :test do
+  gem "factory_girl_rails", "~> 4.0"
+end
+

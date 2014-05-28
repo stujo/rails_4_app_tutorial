@@ -11,38 +11,38 @@ describe Thing do
   let(:valid_description) { 'Description of Thing' }
   let(:long_description) { 'N' * 1001 }
 
-  let(:valid_thing) { Thing.new(name: valid_name, description: valid_description) }
+  let(:valid_thing) {  build(:thing)  }
 
   it 'should be valid' do
     expect(valid_thing).to be_valid
   end
 
   it 'should be invalid with short_name' do
-    expect(Thing.new(name: short_name, description: valid_description)).to_not be_valid
+    expect(build(:thing, name: short_name)).to_not be_valid
   end
 
   it 'should be invalid with long_name' do
-    expect(Thing.new(name: long_name, description: valid_description)).to_not be_valid
+    expect(build(:thing, name: long_name)).to_not be_valid
   end
 
   it 'should be valid with longest_name' do
-    expect(Thing.new(name: longest_name, description: valid_description)).to be_valid
+    expect(build(:thing, name: longest_name)).to be_valid
   end
 
   it 'should be valid with shortest_name' do
-    expect(Thing.new(name: shortest_name, description: valid_description)).to be_valid
+    expect(build(:thing, name: shortest_name)).to be_valid
   end
 
   it 'should be invalid without name' do
-    expect(Thing.new(description: valid_description)).to_not be_valid
+    expect(build(:thing, name: nil)).to_not be_valid
   end
 
   it 'should be valid without description' do
-    expect(Thing.new(name: valid_name)).to be_valid
+    expect(build(:thing, name: valid_name)).to be_valid
   end
 
   it 'should be invalid with long description' do
-    expect(Thing.new(name: valid_name, description: long_description)).to_not be_valid
+    expect(build(:thing, name: valid_name, description: long_description)).to_not be_valid
   end
 
 end
