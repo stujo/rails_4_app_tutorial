@@ -69,3 +69,8 @@ end
 
 #Level 06-Seeding
 gem 'forgery'
+
+#Level 07-Devise
+gem 'devise'
+
+
