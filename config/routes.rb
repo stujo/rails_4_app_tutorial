@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   resources :things
 
+  root 'pages#helloworld'
+
   # get 'pages/helloworld'
 
   get 'helloworld' => 'pages#helloworld', as: :helloworld
