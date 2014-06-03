@@ -54,7 +54,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '2.99'
   gem 'capybara'
 end
 
@@ -72,5 +72,9 @@ gem 'forgery'
 
 #Level 07-Devise
 gem 'devise'
+group :test do
+  gem 'warden-rspec-rails'
+  gem 'rspec-activemodel-mocks'
+end
 
 
